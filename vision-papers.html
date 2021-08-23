@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="stylesheet.css" rel="stylesheet">
+    <title>Reintegrating Biology</title>
+    <link rel="shortcut icon" type="image/png" href="/images/Reintegrating-Biology-Favicon.png"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo"><img src="/images/Reintegrating-Biology-Logo.png" alt="Reintegrating Biology"></a>
+            <nav class="topnav" id="myTopnav">
+                <a href="../">Home</a>
+                <a href="../town-halls.html">Town Halls</a>
+                <a href="../jumpstarts.html">Jumpstarts</a>
+                <a href="../vision-papers.html" class="active">Vision Papers</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header> 
+        <main>
+            <section class="content">
+                <h1 class="page-heading">Vision Papers</h1>
+                <input type="text" id="myInput" onkeyup="mySearchFunction()" placeholder="Search Vision Papers..">
+                <table id="myTable">
+                    <tr class="header">
+                      <th style="width:100%;">Title</th>
+                    </tr>
+                    <tr>
+                      <td><a href="/files/papers/A-framework-for-investigating-Rules-of-Life-across-disciplines.pdf" target="_blank">
+                        A framework for investigating Rules of Life across disciplines
+                      </a></td>
+                    </tr>
+                  </table>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <section>© 2019 Reintegrating Biology. All Rights Reserved.</section>
+    </footer>
+</body>
+</html>
+<script>
+    function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+    }
+    function mySearchFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+     filter = input.value.toUpperCase();
+     table = document.getElementById("myTable");
+     tr = table.getElementsByTagName("tr");
+
+     // Loop through all table rows, and hide those who don't match the search query
+     for (i = 0; i < tr.length; i++) {
+       td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+       txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+     }
+    }
+}
+</script>
