@@ -6,8 +6,8 @@ hr {height: 1px;border: none;background-color:#cecece}
 a {text-decoration: none;}
 
 h1 {size: 42px; line-height: 42px; font-weight:400; font-family: 'Quicksand', sans-serif;}
-h2 {size: 32px; line-height: 39px; font-weight: 200; font-family: 'Quicksand', sans-serif;}
-h3 {size: 21px; line-height: 25px; font-weight: 200; font-family: 'Quicksand', sans-serif;}
+h2 {size: 32px; line-height: 39px; font-weight: 300; font-family: 'Quicksand', sans-serif;}
+h3 {size: 21px; line-height: 25px; font-weight: 300; font-family: 'Quicksand', sans-serif;}
 
 header {padding: 25px 0;}
 nav {float: right; overflow: hidden; z-index: 1;}
